@@ -14,6 +14,22 @@ const Pricing = () => {
           </p>
         </div>
 
+        {/* Risk-Free Guarantee Banner */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-300 rounded-xl p-8 max-w-xl shadow-lg">
+            <div className="flex items-center gap-4 mb-3">
+              <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+              <span className="text-base font-semibold text-red-800 uppercase tracking-wide">100% Risk-Free</span>
+            </div>
+            <p className="text-xl font-bold text-red-900 leading-snug mb-3">
+              Only start paying us AFTER we generate $3,000 AUD for your restaurant
+            </p>
+            <p className="text-base text-red-700">
+              No upfront costs • No setup fees • Results guaranteed
+            </p>
+          </div>
+        </div>
+
         {/* Pricing Card */}
         <div className="max-w-2xl mx-auto">
           <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-white shadow-xl">
