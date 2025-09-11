@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Eye } from "lucide-react";
 import appMockup from "@/assets/app-mockup.jpg";
 
 const Hero = () => {
@@ -37,6 +37,17 @@ const Hero = () => {
               <Button size="lg" className="btn-hero group w-full sm:w-auto px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-200">
                 Get Started
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="group w-full sm:w-auto px-8 py-6 text-lg font-semibold border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
+                asChild
+              >
+                <a href="#features">
+                  See All Features
+                  <Eye className="ml-3 w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+                </a>
               </Button>
             </div>
 
