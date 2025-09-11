@@ -16,36 +16,44 @@ const Hero = () => {
                 is Digital
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Transform your restaurant into a revenue-generating machine with our all-in-one digital growth platform. Boost sales by 40% in the first 3 months.
+                Transform your restaurant into a revenue-generating machine with our all-in-one digital growth platform. Boost sales by 30% in the first 3 months.
               </p>
+              {/* Risk-Free Guarantee Banner */}
+              <div className="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-300 rounded-xl p-8 max-w-xl shadow-lg">
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+                  <span className="text-base font-semibold text-red-800 uppercase tracking-wide">100% Risk-Free</span>
+                </div>
+                <p className="text-xl font-bold text-red-900 leading-snug mb-3">
+                  Only start paying us AFTER we generate $3,000 AUD for your restaurant
+                </p>
+                <p className="text-base text-red-700">
+                  No upfront costs • No setup fees • Results guaranteed
+                </p>
+              </div>
             </div>
-
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="btn-hero group">
-                Start Now
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="btn-secondary group">
-                <Play className="mr-2 w-4 h-4" />
-                See All Features
+              <Button size="lg" className="btn-hero group w-full sm:w-auto px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-200">
+                Get Started
+                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" />
               </Button>
             </div>
 
             {/* Trust indicators */}
             <div className="flex items-center space-x-6 pt-4">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="text-2xl font-bold text-primary">2,500+</div>
                 <div className="text-sm text-muted-foreground">Restaurants</div>
-              </div>
+              </div> */}
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">40%</div>
+                <div className="text-2xl font-bold text-primary">30%</div>
                 <div className="text-sm text-muted-foreground">Avg. Revenue Boost</div>
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">$50K+</div>
+                <div className="text-2xl font-bold text-primary">$5K+</div>
                 <div className="text-sm text-muted-foreground">Monthly Savings</div>
               </div>
             </div>
@@ -78,10 +86,10 @@ const Hero = () => {
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 bg-success text-success-foreground px-3 py-2 rounded-full text-sm font-semibold animate-pulse">
-                +40% Sales
+                +30% Sales
               </div>
               <div className="absolute -bottom-4 -left-4 bg-warning text-warning-foreground px-3 py-2 rounded-full text-sm font-semibold animate-pulse">
-                $50/mo Saved
+                $5000/mo Saved
               </div>
             </div>
           </div>

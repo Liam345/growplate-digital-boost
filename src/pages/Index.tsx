@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
-import HowItWorks from "@/components/HowItWorks";
+import Pricing from "@/components/Pricing";
 
 const Index = () => {
   return (
@@ -9,7 +9,7 @@ const Index = () => {
       <Header />
       <Hero />
       <Features />
-      <HowItWorks />
+      <Pricing />
     </main>
   );
 };

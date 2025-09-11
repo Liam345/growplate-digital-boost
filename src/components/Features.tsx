@@ -17,55 +17,49 @@ const Features = () => {
       title: "Website Optimized for Sales",
       benefits: [
         "Increase online orders by 50%",
-        "Save $200/month on web development",
+        "Save 1000's of dollars on web development",
         "Get 3x more customer conversions"
       ]
     },
     {
       icon: Calendar,
-      title: "Online Booking & Takeaway",
+      title: "Online Takeaway Ordering ",
       benefits: [
-        "Reduce no-shows by 60%",
-        "Save $300/month on booking platforms",
-        "Boost table turnover by 25%"
-      ]
-    },
-    {
-      icon: MessageSquare,
-      title: "SMS Marketing",
-      benefits: [
-        "Reach 95% of customers instantly",
-        "Save $150/month on marketing tools",
-        "Drive 40% repeat business"
-      ]
-    },
-    {
-      icon: Gift,
-      title: "Loyalty Program",
-      benefits: [
-        "Increase customer lifetime value by 35%",
-        "Save $100/month on loyalty platforms",
-        "Boost repeat visits by 80%"
-      ]
-    },
-    {
-      icon: Smartphone,
-      title: "Native App Experience",
-      benefits: [
-        "Increase order frequency by 45%",
-        "Save $500/month on app development",
-        "Improve customer retention by 60%"
+        "Save 30% percent commisions from delivery apps",
+        "Incentivise customers to order from your website",
+        "Targeted offers to increase average order value"
       ]
     },
     {
       icon: Palette,
-      title: "Custom Branding",
+      title: "Your Own Brand",
       benefits: [
-        "Stand out from competitors",
-        "Save $400/month on design costs",
-        "Build stronger brand recognition"
+        "We never put our name on your menus, website or app",
+        "You own your data and your channels even if you stop using GrowPlate",
+        "Build your own brand – we stay in the background while you grow."
       ]
-    }
+    },
+    // {
+    //   icon: MessageSquare,
+    //   title: "SMS Marketing",
+    //   benefits: [
+    //     "Reach 95% of customers instantly",
+    //     "Save $150/month on marketing tools",
+    //     "Drive 40% repeat business"
+    //   ]
+    // },
+    // {
+    //   icon: Gift,
+    //   title: "Loyalty Program",
+    //   benefits: [
+    //     "Increase customer lifetime value by 35%",
+    //     "Save $100/month on loyalty platforms",
+    //     "Boost repeat visits by 80%",
+    //     "Increase regular customers – 20% of your guests account for 80% of revenue",
+    //     "Automatic rewards directly in the app",
+    //     "More repeat visits every month"
+    //  ]
+    // },
   ];
 
   return (
@@ -126,10 +120,6 @@ const Features = () => {
               <span className="text-primary font-semibold">Average ROI: 400% in first year</span>
             </div>
             <div className="w-px h-6 bg-primary/20"></div>
-            <div className="flex items-center space-x-2">
-              <Users className="w-5 h-5 text-primary" />
-              <span className="text-primary font-semibold">Join 2,500+ successful restaurants</span>
-            </div>
           </div>
         </div>
       </div>
