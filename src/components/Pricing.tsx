@@ -2,10 +2,10 @@ import { CheckCircle } from "lucide-react";
 
 const Pricing = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+    <section id="pricing" className="py-20 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-4">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             What does it cost?
           </h2>
@@ -15,7 +15,7 @@ const Pricing = () => {
         </div>
 
         {/* Risk-Free Guarantee Banner */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-4">
           <div className="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-300 rounded-xl p-8 max-w-xl shadow-lg">
             <div className="flex items-center gap-4 mb-3">
               <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>

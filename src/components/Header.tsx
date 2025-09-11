@@ -20,9 +20,6 @@ const Header = () => {
           <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
             Features
           </a>
-          <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors">
-            How It Works
-          </a>
           <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
             Pricing
           </a>
@@ -48,13 +45,6 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Features
-            </a>
-            <a
-              href="#how-it-works"
-              className="block text-muted-foreground hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              How It Works
             </a>
             <a
               href="#pricing"

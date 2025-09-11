@@ -32,6 +32,13 @@ const Hero = () => {
                 </p>
               </div>
             </div>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="btn-hero group w-full sm:w-auto px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-200">
+                Get Started
+                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" />
+              </Button>
+            </div>
 
             {/* Trust indicators */}
             <div className="flex items-center space-x-6 pt-4">
