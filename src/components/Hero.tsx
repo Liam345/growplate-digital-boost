@@ -16,15 +16,15 @@ const Hero = () => {
                 is Digital
               </h1>
               {/* Risk-Free Guarantee Banner */}
-              <div className="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-300 rounded-xl p-6 max-w-lg shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-red-800 uppercase tracking-wide">100% Risk-Free</span>
+              <div className="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-300 rounded-xl p-8 max-w-xl shadow-lg">
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+                  <span className="text-base font-semibold text-red-800 uppercase tracking-wide">100% Risk-Free</span>
                 </div>
-                <p className="text-lg font-bold text-red-900 leading-snug">
+                <p className="text-xl font-bold text-red-900 leading-snug mb-3">
                   Only start paying us AFTER we generate $3,000 AUD for your restaurant
                 </p>
-                <p className="text-sm text-red-700 mt-2">
+                <p className="text-base text-red-700">
                   No upfront costs • No setup fees • Results guaranteed
                 </p>
               </div>
