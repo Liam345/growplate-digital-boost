@@ -15,6 +15,9 @@ const Hero = () => {
                 <span className="text-primary">Restaurant Sales</span>{" "}
                 is Digital
               </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+                Transform your restaurant into a revenue-generating machine with our all-in-one digital growth platform. Boost sales by 30% in the first 3 months.
+              </p>
               {/* Risk-Free Guarantee Banner */}
               <div className="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-300 rounded-xl p-8 max-w-xl shadow-lg">
                 <div className="flex items-center gap-4 mb-3">
