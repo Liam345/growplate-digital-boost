@@ -16,8 +16,21 @@ const Hero = () => {
                 is Digital
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Transform your restaurant into a revenue-generating machine with our all-in-one digital growth platform. Boost sales by 40% in the first 3 months.
+                Transform your restaurant into a revenue-generating machine with our all-in-one digital growth platform
               </p>
+              {/* Risk-Free Guarantee Banner */}
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-6 max-w-lg">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-semibold text-green-800 uppercase tracking-wide">100% Risk-Free</span>
+                </div>
+                <p className="text-lg font-bold text-green-900 leading-snug">
+                  Only start paying us AFTER we generate $3,000 AUD for your restaurant
+                </p>
+                <p className="text-sm text-green-700 mt-2">
+                  No upfront costs • No setup fees • Results guaranteed
+                </p>
+              </div>
             </div>
 
             {/* CTAs */}
