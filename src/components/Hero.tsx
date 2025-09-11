@@ -15,50 +15,35 @@ const Hero = () => {
                 <span className="text-primary">Restaurant Sales</span>{" "}
                 is Digital
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Transform your restaurant into a revenue-generating machine with our all-in-one digital growth platform
-              </p>
               {/* Risk-Free Guarantee Banner */}
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-6 max-w-lg">
+              <div className="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-300 rounded-xl p-6 max-w-lg shadow-lg">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-green-800 uppercase tracking-wide">100% Risk-Free</span>
+                  <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm font-semibold text-red-800 uppercase tracking-wide">100% Risk-Free</span>
                 </div>
-                <p className="text-lg font-bold text-green-900 leading-snug">
+                <p className="text-lg font-bold text-red-900 leading-snug">
                   Only start paying us AFTER we generate $3,000 AUD for your restaurant
                 </p>
-                <p className="text-sm text-green-700 mt-2">
+                <p className="text-sm text-red-700 mt-2">
                   No upfront costs • No setup fees • Results guaranteed
                 </p>
               </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="btn-hero group">
-                Start Now
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="btn-secondary group">
-                <Play className="mr-2 w-4 h-4" />
-                See All Features
-              </Button>
-            </div>
-
             {/* Trust indicators */}
             <div className="flex items-center space-x-6 pt-4">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <div className="text-2xl font-bold text-primary">2,500+</div>
                 <div className="text-sm text-muted-foreground">Restaurants</div>
-              </div>
+              </div> */}
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">40%</div>
+                <div className="text-2xl font-bold text-primary">30%</div>
                 <div className="text-sm text-muted-foreground">Avg. Revenue Boost</div>
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">$50K+</div>
+                <div className="text-2xl font-bold text-primary">$5K+</div>
                 <div className="text-sm text-muted-foreground">Monthly Savings</div>
               </div>
             </div>
@@ -91,10 +76,10 @@ const Hero = () => {
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 bg-success text-success-foreground px-3 py-2 rounded-full text-sm font-semibold animate-pulse">
-                +40% Sales
+                +30% Sales
               </div>
               <div className="absolute -bottom-4 -left-4 bg-warning text-warning-foreground px-3 py-2 rounded-full text-sm font-semibold animate-pulse">
-                $50/mo Saved
+                $5000/mo Saved
               </div>
             </div>
           </div>
