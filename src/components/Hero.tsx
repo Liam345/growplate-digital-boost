@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Eye } from "lucide-react";
 import appMockup from "@/assets/app-mockup.jpg";
+import BookDemoModal from "./BookDemoModal";
 
 const Hero = () => {
+  const [isBookDemoModalOpen, setIsBookDemoModalOpen] = useState(false);
   return (
     <section className="pt-32 pb-20 px-4">
       <div className="container mx-auto">
@@ -34,8 +37,12 @@ const Hero = () => {
             </div>
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="btn-hero group w-full sm:w-auto px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-200">
-                Get Started
+              <Button 
+                size="lg" 
+                className="btn-hero group w-full sm:w-auto px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-200"
+                onClick={() => setIsBookDemoModalOpen(true)}
+              >
+                Book a Free Demo
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform duration-200" />
               </Button>
               <Button 
@@ -64,7 +71,7 @@ const Hero = () => {
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">$5K+</div>
+                <div className="text-2xl font-bold text-primary">$3K+</div>
                 <div className="text-sm text-muted-foreground">Monthly Savings</div>
               </div>
             </div>
@@ -106,6 +113,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <BookDemoModal 
+        open={isBookDemoModalOpen} 
+        onOpenChange={setIsBookDemoModalOpen} 
+      />
     </section>
   );
 };

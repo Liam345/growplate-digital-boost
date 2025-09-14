@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import BookDemoModal from "./BookDemoModal";
 
 const Pricing = () => {
+  const [isBookDemoModalOpen, setIsBookDemoModalOpen] = useState(false);
   return (
     <section id="pricing" className="py-20 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,14 +63,23 @@ const Pricing = () => {
             </div>
 
             {/* CTA Button */}
-            <button className="w-full bg-white text-blue-600 font-semibold py-4 px-6 rounded-lg hover:bg-blue-50 transition-colors duration-200 text-lg">
-              Get Started
-            </button>
+            <Button 
+              size="lg" 
+              className="w-full bg-white text-blue-600 font-semibold py-4 px-6 rounded-lg hover:bg-blue-50 transition-colors duration-200 text-lg"
+              onClick={() => setIsBookDemoModalOpen(true)}
+            >
+              Book a Free Demo
+            </Button>
 
             {/* Footer Text */}
           </div>
         </div>
       </div>
+      
+      <BookDemoModal 
+        open={isBookDemoModalOpen} 
+        onOpenChange={setIsBookDemoModalOpen} 
+      />
     </section>
   );
 };
