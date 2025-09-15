@@ -104,10 +104,10 @@ const Hero = () => {
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 bg-success text-success-foreground px-3 py-2 rounded-full text-sm font-semibold animate-pulse">
-                +30% Sales
+                +30% Increase in Revenue
               </div>
               <div className="absolute -bottom-4 -left-4 bg-warning text-warning-foreground px-3 py-2 rounded-full text-sm font-semibold animate-pulse">
-                $5000/mo Saved
+                $3000/mo + Saved
               </div>
             </div>
           </div>
