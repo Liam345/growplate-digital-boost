@@ -120,7 +120,6 @@ export default function BookDemoModal({ open, onOpenChange }: BookDemoModalProps
       // Submit to Supabase database
       const booking = await demoBookingService.createBooking(formData);
       
-      console.log("Demo booking successfully created:", booking.id);
       toast.success("Demo booking submitted successfully!");
       
       // Reset form and show confirmation
