@@ -10,6 +10,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Mail, User, Store, MapPin, Calendar, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
+import { demoBookingService, DemoBookingError } from "@/services/demoBookingService";
 
 interface BookDemoModalProps {
   open: boolean;
@@ -68,18 +70,6 @@ export default function BookDemoModal({ open, onOpenChange }: BookDemoModalProps
     }
   };
 
-  // Australian phone number validation
-  const validatePhoneNumber = (phone: string): boolean => {
-    // Remove all spaces, parentheses, and dashes
-    const cleanPhone = phone.replace(/[\s\(\)\-]/g, '');
-    
-    // Australian mobile: starts with 04 (10 digits) or +614 (13 digits)
-    // Australian landline: starts with area code like 02, 03, 07, 08
-    const mobilePattern = /^(\+614|04)\d{8}$/;
-    const landlinePattern = /^(\+61[2378]|0[2378])\d{8}$/;
-    
-    return mobilePattern.test(cleanPhone) || landlinePattern.test(cleanPhone);
-  };
 
   // Email validation
   const validateEmail = (email: string): boolean => {
@@ -103,8 +93,6 @@ export default function BookDemoModal({ open, onOpenChange }: BookDemoModalProps
 
     if (!formData.phoneNumber.trim()) {
       newErrors.phoneNumber = "Phone number is required";
-    } else if (!validatePhoneNumber(formData.phoneNumber)) {
-      newErrors.phoneNumber = "Please enter a valid Australian phone number";
     }
 
     if (!formData.restaurantName.trim()) {
@@ -129,11 +117,10 @@ export default function BookDemoModal({ open, onOpenChange }: BookDemoModalProps
     setIsSubmitting(true);
 
     try {
-      // Here you would typically send the data to your backend
-      console.log("Demo booking submitted:", formData);
+      // Submit to Supabase database
+      const booking = await demoBookingService.createBooking(formData);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      toast.success("Demo booking submitted successfully!");
       
       // Reset form and show confirmation
       setFormData({
@@ -148,10 +135,21 @@ export default function BookDemoModal({ open, onOpenChange }: BookDemoModalProps
       
     } catch (error) {
       console.error("Error submitting demo booking:", error);
-      // Set a general error that will be displayed in the form
-      setErrors({
-        fullName: "Something went wrong. Please try again or contact us directly.",
-      });
+      
+      if (error instanceof DemoBookingError) {
+        // Show user-friendly error message
+        toast.error(error.message);
+        setErrors({
+          fullName: error.message,
+        });
+      } else {
+        // Handle unexpected errors
+        const errorMessage = "Something went wrong. Please try again or contact us directly.";
+        toast.error(errorMessage);
+        setErrors({
+          fullName: errorMessage,
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -280,16 +278,16 @@ export default function BookDemoModal({ open, onOpenChange }: BookDemoModalProps
               )}
             </div>
 
-            {/* Australian Phone Number */}
+            {/* Phone Number */}
             <div className="space-y-2">
               <Label htmlFor="phoneNumber" className="text-sm font-semibold flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                Australian Phone Number
+                Phone Number
               </Label>
               <Input
                 id="phoneNumber"
                 type="tel"
-                placeholder="04XX XXX XXX or (0X) XXXX XXXX"
+                placeholder="Enter your phone number"
                 value={formData.phoneNumber}
                 onChange={handleInputChange("phoneNumber")}
                 required
@@ -298,9 +296,6 @@ export default function BookDemoModal({ open, onOpenChange }: BookDemoModalProps
               {errors.phoneNumber && (
                 <p className="text-sm text-destructive">{errors.phoneNumber}</p>
               )}
-              <p className="text-xs text-muted-foreground">
-                Enter mobile (04XX XXX XXX) or landline number
-              </p>
             </div>
 
             {/* Restaurant Name */}
